@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인</title>
+</head>
+<style>
+    *{
+        margin: 0 auto;
+        text-align: center;
+    }
+    #container{
+        margin-top: 20%;
+    }
+    input{
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+</style>
+<body>
+    <div id="container">
+        <form action="sign_in_ok.php" method="post">
+            I D : <input type="text" name="id">
+            <br>
+            PW : <input type="text" name="pw">
+            <br>
+            <button type="submit">로그인</button>
+            <a href="sign_up.php" onclick=""  type="submit">회원가입</a>
+        </form>
+    </div>
+
+</body>
+</html>

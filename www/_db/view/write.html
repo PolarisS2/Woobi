@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>글쓰기</title>
+</head>
+<style>
+    *{
+        margin: 0 auto;
+        /* text-align: center; */
+        margin-top: 40px;
+    }
+    #title{
+        width: 500px;
+        height: 40px;
+        margin-bottom: 20px;
+
+    }
+    #text{
+        width: 500px;
+        height: 300px;
+    }
+    label{
+        
+    }
+    #container{
+        text-align: center;
+    }
+
+</style>
+<body>
+    <form action="write_ok.php" method="post">
+        <div id="container">
+        <label>제목</label> &nbsp;&nbsp;&nbsp;
+        <input type="text" id="title" name="title">
+        <br>
+        <label>내용</label> &nbsp;&nbsp;&nbsp;
+        <input type="text" id="text" name="text">
+        <br>
+        <a href="main.php">
+            <input type="submit" value="작성완료">
+        </a>
+        </div>
+    </form>
+    
+
+    
+</body>
+</html>

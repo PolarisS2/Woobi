@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+</head>
+<style>
+    *{
+        margin: 0 auto;
+        /* text-align: center; */
+    }
+    #container{
+        margin-top: 5%;
+        text-align: center;
+        
+    }
+    #container >form > div{
+        margin-top: 30px;
+    }
+    #container >form > div > h3{
+        margin-bottom: 5px;
+        
+    }
+
+    #container >form > div > input{
+        width: 200px;
+        height: 40px;
+    }
+    #container > form > input{
+        margin-top: 30px;
+    }
+    #uidg,#pwg,#cpwg{
+        display: none;
+        color: red;
+    }
+    #uids,#pws,#cpws{
+        display: none;
+        color: green;
+    }
+    
+
+
+
+</style>
+<body>
+    
+    <div id="container">
+        <form action="sign_up_ok.php" method="post">
+            <div>
+                <h3>이름</h3>
+                <input type="text" placeholder="이름" id="name" name="name" required>
+            </div>
+
+            <div id="chk_id">
+                <h3>아이디</h3>
+                <input type="text" placeholder="아이디" id="id" name="id" required onkeyup="chk_info()">
+                <span id="uidg">양식이 달라요</span>
+                <span id="uids">양식이 맞아요</span>
+            </div>
+            <button>중복확인</button>
+
+            <div>
+                <h3>비밀번호</h3>
+                <input type="text" placeholder="비밀번호" id="pw" name="pw" required onkeyup="chk_info()">
+                <span id="pwg">영문자+숫자+특수문자로 8~25자</span>
+                <span id="pws">양식이 맞아요</span>
+            </div>
+
+            <div>
+                <h3>비밀번호 확인</h3>
+                <input type="text" placeholder="비밀번호" id="cpw" name="cpw" required onkeyup="chk_info()">
+                <span id="cpwg">일치하지 않습니다</span>
+                <span id="cpws">일치합니다</span>
+            </div>
+            
+
+            <div>
+                <h3>나이</h3>
+                <input type="text" placeholder="나이" id="age" name="age" required>
+            </div>
+
+            <input type="submit" value="가입완료" onclick="chk_info()">
+        </form>
+    </div>
+    
+    
+</body>
+</html>
+<script>
+    var name = document.querySelector("#name");
+    var id = document.querySelector("#id");
+    var pw = document.querySelector("#pw");
+    var cpw = document.querySelector("#cpw");
+    var age = document.querySelector("#age");
+
+    function chk_info(asValue){
+	var check_id = /^[a-z]+[a-z0-9]{5,19}$/; //아이디 양식
+    var check_pw = /^(?=.*[a-zA-Z])(?=.*[!@#$%^*+=-])(?=.*[0-9]).{8,25}$/; //비밀번호양식
+
+    if(check_id.test(id.value)){
+        document.querySelector("#uidg").style.display = "none"; //달라요
+        document.querySelector("#uids").style.display = "block";
+        
+    }else{
+        document.querySelector("#uidg").style.display = "block"; //달라요
+        document.querySelector("#uids").style.display = "none";
+    }
+
+    // ==================비밀번호======================
+    if(check_pw.test(pw.value)){
+        document.querySelector("#pwg").style.display = "none"; //달라요
+        document.querySelector("#pws").style.display = "block";
+    }else{
+        document.querySelector("#pwg").style.display = "block"; //달라요
+        document.querySelector("#pws").style.display = "none";
+    }
+
+    if(pw.value == cpw.value){
+        document.querySelector("#cpwg").style.display = "none"; //달라요
+        document.querySelector("#cpws").style.display = "block";
+    }else{
+        document.querySelector("#cpwg").style.display = "block"; //달라요
+        document.querySelector("#cpws").style.display = "none";
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+	
+    }
+</script>

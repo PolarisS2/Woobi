@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메인화면</title>
+</head>
+
+<style>
+    *{
+        margin: 0 auto;
+    }
+    table{
+        border-bottom: 1px solid #444444;
+        border-collapse: collapse;
+        text-align: center;
+
+    }
+    tr{
+        border-bottom: 1px solid #444444;
+        padding: 10px;
+        text-align: center;
+    }
+    td{
+        border-bottom: 1px solid #efefef;
+        padding: 10px;
+        text-align: center;
+    }
+    #no{
+        width: 50px;
+    }
+    #title{
+        width: 500px;
+    }
+    #creater{
+        width: 100px;
+    }
+    #day{
+        width: 200px;
+    }
+    #view{
+        width: 50px;
+    }
+    .text{
+        text-align:center;
+        padding-top:20px;
+        color:#000000
+    }
+
+    
+</style>
+<body>
+
+    <table>
+        <tr>
+            <td id="no">번호</td>
+            <td id="title">제목</td>
+            <td id="creater">작성자</td>
+            <td id="day">날짜</td>
+            <td id="view">조회수</td>
+        </tr>
+
+    </table>
+    
+    <!-- <div>
+        <a href="./_db/create.php" id="move"><button>글쓰기</button></a>
+    </div> -->
+
+    <div class = text>
+        <button onClick="location.href='write.php'">글쓰기</button>
+    </div>
+
+</body>
+</html>
+
