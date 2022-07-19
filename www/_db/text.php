@@ -1,27 +1,31 @@
 <?php
-include("common.php");
+	include ("common.php");
 
-$title = $_SESSION['title'];
+	$no = $_POST['text'];
 
-$sql =  "select no, title, creater, day
-        from border
-        where title = '$title'
-";
+	$sql = "select
+	no,
+	title,
+	creater,
+	day,
+	view,
+	text
+	from border
+	where no = '$no'
+	";
 
-$result = $conn -> query($sql);
+	$result = $conn -> query($sql);
 
-echo $result;
-
-
-
-
-
-
-
-
-
-
-
-
-
+    
 ?>
+
+<div>
+	<?php 
+	$row = mysqli_fetch_assoc($result);
+	echo $row['text'];
+	echo $row['creater'];
+	?>
+
+
+</div>
+
