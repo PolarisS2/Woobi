@@ -1,20 +1,18 @@
 <?php
 include("common.php");
 
-$id = $_SESSION['id'];
-$name = $_SESSION['name'];
-$no = $_SESSION['no'];
+$title = $_SESSION['title'];
 
-$sql = "select 
-no,
-title,
-creater,
-text
+$sql =  "select no, title, creater, day
+        from border
+        where title = '$title'
 ";
 
 $result = $conn -> query($sql);
 
-$data = mysqli_fetch_assoc($result);
+echo $result;
+
+
 
 
 

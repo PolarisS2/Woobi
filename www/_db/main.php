@@ -49,9 +49,6 @@ else {
         width: 500px;
         height: 300px;
     }
-    label{
-        
-    }
     #container{
         text-align: center;
     }
