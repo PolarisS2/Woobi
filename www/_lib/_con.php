@@ -1,8 +1,8 @@
 <?php
   $servername = "localhost"; //호스트
-  $username = "anchor"; //계정
-  $password = "bravo!77"; //password
-  $db = "anchor"; //DB
+  $username = "polariss2"; //계정
+  $password = "tjdqls123!@#"; //password
+  $db = "polariss2"; //DB
 
   //mysqli 객체
   $conn1 = new mysqli($servername, $username, $password, $db);

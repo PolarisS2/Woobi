@@ -8,7 +8,7 @@
 </head>
 <body>
   <ul>
-    <li><a href="author/author_up.php">작가등록</a></li>
+    <li><a href="_author/author_up.php">작가등록</a></li>
     <li><a href="genre/index.php">장르등록</a></li>
   </ul>
 </body>

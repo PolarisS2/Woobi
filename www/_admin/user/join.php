@@ -1,6 +1,6 @@
 <?php
-  include_once $_SERVER["DOCUMENT_ROOT"]."/rwb/_lib/lib.php";
-  include_once $_SERVER["DOCUMENT_ROOT"]."/rwb/_lib/_con.php";
+  include_once $_SERVER["DOCUMENT_ROOT"]."/_lib/lib.php";
+  include_once $_SERVER["DOCUMENT_ROOT"]."/_lib/_con.php";
 
   $sqlGenre = "SELECT * FROM Genre ORDER BY name";
   $resGenre = $conn1->query($sqlGenre);

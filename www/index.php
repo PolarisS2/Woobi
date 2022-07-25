@@ -50,6 +50,6 @@
   <title>Document</title>
 </head>
 <body>
-  <a href="admin/">包府磊</a>
+  <a href="_admin/">包府磊</a>
 </body>
 </html>
