@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 // 전송된 데이터 유효성 검사
 function test_input($data) {
   $data = trim($data);
