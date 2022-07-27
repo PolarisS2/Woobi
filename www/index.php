@@ -1,5 +1,6 @@
 <?php
   include_once $_SERVER["DOCUMENT_ROOT"]."/_lib/_con.php";
+  include("index.html");
 
   // $sql = "DROP TABLE MyGuests";
     
@@ -41,15 +42,3 @@
   //   echo $sql . "<br>" . $e->getMessage();
   // }
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="EUC-KR">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <a href="_admin/">관리자</a>
-</body>
-</html>
