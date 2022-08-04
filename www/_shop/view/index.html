@@ -9,6 +9,118 @@
     <title>메인화면</title>
 
 </head>
+<style>
+    .container{        
+    margin-top: 10px;
+    height: 300vh;
+}
+#navbar{
+    height: 50px;
+}
+#navbar_menu{
+    list-style: none;
+    display: inline-flex;
+    position: fixed;
+}
+#navbar_menu::after{
+    clear: both;
+    content: '';
+    display: table;
+}
+#navbar_menu > li{
+    text-align: center;
+    font-size: medium;
+    margin-left: 10px;
+    margin-top: 10px;
+    width: 70px;
+}
+#navbar_menu > li:nth-child(17){
+    margin-left: 20px;
+}
+#contents_1{
+    width: 100%;
+}
+.carousel-item > img{
+    z-index: unset;
+    opacity: 70%;
+}
+#contents_2{
+    text-align: center;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    text-align: center;
+}
+#contents_3{
+    display: inline-flex;
+    margin-bottom: 100px;
+    text-align: center;
+}
+#contents_4{
+    display: inline-flex;
+    margin-bottom: 100px;
+    text-align: center;
+}
+#contents_5{
+    display: inline-flex;
+    margin-bottom: 100px;
+    text-align: center;
+}
+.card:nth-child(2), .card:nth-child(3), .card:nth-child(4){
+    margin-left: 45px;
+}
+#contents_6{
+    display: inline-flex;
+    margin-bottom: 100px;
+    text-align: center;
+}
+.re_contents{
+    float: left;
+    margin-bottom: 20px;
+}
+.re_contents::after{
+    clear: both;
+    content: '';
+    display: table;
+}
+.re_img{
+    float: left;
+    width: 130px;
+    margin-right: 20px;
+}
+.re_img::after{
+    clear: both;
+    content: '';
+    display: table;
+}
+.re_title{
+    float: left;
+}
+.re_title::after{
+    clear: both;
+    content: '';
+    display: table;
+}
+.re_text{
+    float: left;
+}
+.re_text::after{
+    clear: both;
+    content: '';
+    display: table;
+}
+a{
+    text-decoration: none;
+}
+
+#review_text{
+    /* display: flex; */
+}
+#review_a{
+    font-size: xx-large;
+}
+
+
+</style>
 
 <body>
     <div class="container">
@@ -30,7 +142,6 @@
                 <li>Big size</li>
                 <li>당일발송</li>
                 <li>Sale</li>
-                <li><input type="text" placeholder="검색어를 입력하세요."></li>
                 <li><a href="log_in.php">Log-in</a></li>
                 <li>Order</li>
                 <li>Basket</li>
@@ -238,7 +349,10 @@
         </div>
 
         <div id="review">
-            <h2>리뷰</h2>
+            <div id="review_text">
+                <a href="board.php" id="review_a">리뷰</a>
+                <a href="review.php"><input type="button" value="작성하기"></a>
+            </div>
             <hr>
             <div class="re_contents">
                 
@@ -287,11 +401,11 @@
                     </div>
 
                     <div class="re_text">
-                        <p><u>집에서 편하게 입기 좋아??ㄷ (2022-07-18 08:00:12 에 등록된 네이버 페이 구매평)</u></p>
+                        <p><u>집에서 편하게 입기 좋아?? (2022-07-18 08:00:12 에 등록된 네이버 페이 구매평)</u></p>
                     </div>
 
                     <div class="re_text">
-                        <p><u>집에서 편하게 입기 좋앙ㄴ?ㄷ (2022-07-18 07:59:45 에 등록된 네이버 페이 구매평)</u></p>
+                        <p><u>집에서 편하게 입기 좋앙? (2022-07-18 07:59:45 에 등록된 네이버 페이 구매평)</u></p>
                     </div>
                 </div>
             </div>

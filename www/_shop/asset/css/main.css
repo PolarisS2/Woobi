@@ -1,4 +1,4 @@
-.container{        
+/* .container{        
     margin-top: 10px;
     height: 300vh;
 }
@@ -69,12 +69,12 @@
     content: '';
     display: table;
 }
-#re_img{
+.re_img{
     float: left;
     width: 130px;
     margin-right: 20px;
 }
-#re_img::after{
+.re_img::after{
     clear: both;
     content: '';
     display: table;
@@ -97,4 +97,4 @@
 }
 a{
     text-decoration: none;
-}
+} */
