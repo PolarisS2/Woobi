@@ -1,0 +1,27 @@
+*{
+margin: 0 auto;
+text-align: center;
+}
+.container{
+margin-top: 10%;
+text-align: center;
+}
+input{
+margin-bottom: 15px;
+width: 200px;
+height: 45px;
+}
+.err{
+font-weight: normal;
+color: red;
+}
+.ok{
+font-weight: normal;
+color: green;
+}
+#test{
+    width: 200px;
+}
+#test > div{
+    float: left;
+}
