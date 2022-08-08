@@ -1,26 +1,51 @@
 <?php
 include("common.php");
+
 $id = $_POST['id'];
 $pw = $_POST['pw'];
 $no = $_POST['no'];
+$name = $_POST['name'];
 $title = $_POST['title'];
 $text = $_POST['text'];
 $date = date('Y-m-d H:i:s');
-$img = $_POST['img'];
+$image = $_POST['image'];
 $URL = './board.php';
+$dir = "_image/";
 
-$sql = "INSERT INTO board (no,id, pw, text, date,title,name,img) 
-        values(null,'$id', '$pw', '$text','$date', '$title','$name','$img')";
-$result = $conn->query($sql);
-if ($result) {
-?> <script>
-        alert("<?php echo "게시글이 등록되었습니다." ?>");
-        location.replace("<?php echo $URL ?>");
-    </script>
+
+//if ($result) {
+if($_FILES['image']['name']) {
+	$imageFullName = strtolower($_FILES['image']['name']);
+	$imageNameSlice = explode(".",$imageFullName);
+	$imageName = $imageNameSlice[0];
+	$imageType = $imageNameSlice[1];
+	$image_ext = array('jpg','jpeg','gif','png');
+	$dates = date("mdhis",time());
+	$newImage = chr(rand(97,122)).chr(rand(97,122)).$dates.rand(1,9).".".$imageType;
+	move_uploaded_file($_FILES['image']['tmp_name'],$dir.$newImage);
+
+	$sql = "INSERT INTO board (no,id, pw, text, date,title,name,image) 
+	values(null,'$id', '$pw', '$text','$date', '$title','$name','".$dir.$newImage."')";
+
+	//die($sql);
+	
+	$result = $conn->query($sql);
+
+	//chmod($dir.$newImage,0777);
+?>
+	<script>
+		alert("<?php echo "게시글이 등록되었습니다." ?>");
+		location.replace("<?php echo $URL ?>");
+	</script>
 <?php
 } else {
-    echo "게시글 등록에 실패하였습니다.";
+	echo "게시글 등록에 실패하였습니다.";
 }
 
-mysqli_close($connect);
+
+
+	
+
+	
+	
 ?>

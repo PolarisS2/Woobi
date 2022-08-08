@@ -34,7 +34,7 @@ include("common.php");
 </head>
 
 <body>
-    <form method="post" action="review_ok.php">
+    <form method="post" action="review_ok.php" enctype="multipart/form-data">
         <!-- method : POST!!! (GET X) -->
         <table style="padding-top:50px" align=center width=auto border=0 cellpadding=2>
             <tr>
@@ -62,7 +62,7 @@ include("common.php");
 
                         <tr>
                             <td>∆ƒ¿œ√∑∫Œ</td>
-                            <td><input type="file" name="img"></td>
+                            <td><input type="file" name="image"></td>
                         </tr>
 
                         <tr>
