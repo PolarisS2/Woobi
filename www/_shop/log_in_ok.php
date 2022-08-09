@@ -2,8 +2,9 @@
 include("common.php");
 $id = $_POST['id'];
 $pw = $_POST['pw'];
+$no = $_POST['no'];
 $sql = "
-SELECT id,pw,name 
+SELECT id,pw,name,no 
 FROM shop
 where id = '$id'";
 $res = $conn -> query($sql);

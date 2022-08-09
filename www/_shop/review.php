@@ -47,7 +47,7 @@ include("common.php");
                     <table class="table2">
                         <tr>
                             <td>ÀÛ¼ºÀÚ</td>
-                            <td><input type="text" name="id" size=30></td>
+                            <td><input type="text" name="id" size=30 placeholder="<?php ?>"></td>
                         </tr>
 
                         <tr>
