@@ -4,6 +4,11 @@ include('common.php');
 
 $no = $_GET['no'];
 
+$sql_u = "update board
+        set count = count + 1
+        where no = '$no'";
+
+$result = $conn -> query($sql_u);
 
 $sql = "select 
             title,
@@ -72,8 +77,13 @@ tr,th,td{
     border: 2px solid black;
     border-radius: 10px;
 }
+#like{
+    margin-top: 10px;
+    font-size: x-large;
+}
 
 </style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
 
 <div>
     <table id="con_table">
@@ -119,8 +129,8 @@ tr,th,td{
             </th>
         </tr>
     </table>
-    <div>
-        좋아요 : <?php echo $data['good'];?>
+    <div id="like">
+        <p>좋아요</p> <i id="good" class="bi bi-heart" onclick="good()"></i> <label id="goodcount"><?php echo $data['goodcount'];?> </label>
     </div>
     
     <div id="btn">
@@ -134,3 +144,62 @@ tr,th,td{
     
     <script src="https://kit.fontawesome.com/8d9741eb42.js" crossorigin="anonymous"></script>
 
+    <script>
+    var contentNo = <?php echo $no; ?>;
+    function updateContent() {
+        location.href='update_content.php?no=' + <?php echo $no ?>;
+    }
+    function deleteContent() {
+        location.href='delete_content.php?no=' + <?php echo $no ?>;
+    }
+    function good() {
+        var className = document.querySelector('#good').className
+        if(className == 'bi bi-heart') {
+            document.querySelector('#good').setAttribute('class', 'bi bi-heart-fill');
+            document.querySelector('#good').style.color = 'red';
+            var http = new XMLHttpRequest();
+            http.onreadystatechange = function () {
+                if(this.status == 200 && this.readyState == this.DONE) {                            
+                    if(JSON.parse(http.response)['result'] != 'n'){
+                        // 좋아요 갯수 최신화
+                        document.querySelector('#goodcount').innerText 
+                        = JSON.parse(http.response)['result'];
+                    } else {
+                        alert('실패');
+                    }
+                }            
+            }            
+            
+            var url = "http://polariss2.woobi.co.kr/_shop/API/update_good.php?no=" + contentNo+ '&&cancle=+1';
+            
+            http.open('GET', url);
+            http.send();
+        } 
+        if(className == 'bi bi-heart-fill') {
+            document.querySelector('#good').setAttribute('class', 'bi bi-heart');
+            document.querySelector('#good').style.color = 'black';
+            var http = new XMLHttpRequest();
+            http.onreadystatechange = function () {
+                if(this.status == 200 && this.readyState == this.DONE) {                            
+                    if(JSON.parse(http.response)['result'] != 'n'){
+                        // 좋아요 갯수 최신화
+                        document.querySelector('#goodcount').innerText 
+                        = JSON.parse(http.response)['result'];
+                    } else {
+                        alert('실패');
+                    }
+                }            
+            }            
+            
+            var url = "http://polariss2.woobi.co.kr/_shop/API/update_good.php?no=" + contentNo + '&&cancle=-1';
+            
+            http.open('GET', url);
+            http.send();
+        } 
+        
+    }
+
+
+
+
+</script>

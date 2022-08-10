@@ -1,5 +1,6 @@
 <?php
 include("common.php");
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -47,9 +48,9 @@ include("common.php");
                     <table class="table2">
                         <tr>
                             <td>작성자</td>
-                            <td><input type="text" name="id" size=30 placeholder="<?php ?>"></td>
+                            <td><input type="text" name="id" size=30></td>
                         </tr>
-
+                        
                         <tr>
                             <td>제목</td>
                             <td><input type="text" name="title" size=70></td>

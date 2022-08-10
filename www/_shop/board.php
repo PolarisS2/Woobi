@@ -10,10 +10,9 @@
     }
     #container{
         text-align: center;
-        
+
     }
     #table{
-        /* border: 1px solid #444444; */
         margin-top: 30px;
     }
     #btn{
@@ -32,78 +31,76 @@
 
     /* -----------------------------네온----------------- */
     .neonText {
-  animation: flicker 1.5s infinite alternate;
-  color: #fff;
-  text-align: center;
-  
-}
-@keyframes flicker {
-    
-  0%, 18%, 22%, 25%, 53%, 57%, 100% {
-
-      text-shadow:
-      0 0 4px green,
-      0 0 11px green,
-      0 0 19px green,
-      0 0 40px black,
-      0 0 80px black,
-      0 0 90px black,
-      0 0 100px black,
-      0 0 150px black;
-  
-  }
-  20%, 24%, 55% {        
-      text-shadow: none;
-  }    
-}
-#neonText {
-  animation: flicker 1.5s infinite alternate;
-  color: #fff;
-  text-align: center;
-  padding-top: 15px;
-  
-}
-@keyframes flicker {
-    
-  0%, 18%, 22%, 25%, 53%, 57%, 100% {
-
-      text-shadow:
-      0 0 4px green,
-      0 0 11px green,
-      0 0 19px green,
-      0 0 40px black,
-      0 0 80px black,
-      0 0 90px black,
-      0 0 100px black,
-      0 0 150px black;
-  
-  }
-  20%, 24%, 55% {        
-      text-shadow: none;
-  }    
-}
-th,td{
-    padding: 10px;
-    border-bottom: 1px solid #CD5C5C;
-}
-#first{
-    width: 40px;
-}
-
-
-    
-
+        animation: flicker 1.5s infinite alternate;
+        color: #fff;
+        text-align: center;
+    }
+    @keyframes flicker {
+        0%, 18%, 22%, 25%, 53%, 57%, 100% {
+            text-shadow:
+            0 0 4px green,
+            0 0 11px green,
+            0 0 19px green,
+            0 0 40px black,
+            0 0 80px black,
+            0 0 90px black,
+            0 0 100px black,
+            0 0 150px black;
+            }
+            20%, 24%, 55% {        
+                text-shadow: none;
+            }
+        }
+    #neonText {
+        animation: flicker 1.5s infinite alternate;
+        color: #fff;
+        text-align: center;
+        padding-top: 15px;
+    }
+    @keyframes flicker {
+        0%, 18%, 22%, 25%, 53%, 57%, 100% {
+            text-shadow:
+            0 0 4px green,
+            0 0 11px green,
+            0 0 19px green,
+            0 0 40px black,
+            0 0 80px black,
+            0 0 90px black,
+            0 0 100px black,
+            0 0 150px black;
+        }
+        20%, 24%, 55% {        
+            text-shadow: none;
+        }    
+    }
+    th,td{
+        padding: 10px;
+        border-bottom: 1px solid #CD5C5C;
+    }
+    #first{
+        width: 40px;
+    }
+    #second{
+        width: 800px;
+    }
 </style>
 
 <body>
     <?php
-        include("common.php");
+        // include_once("common.php");
+        $host = "localhost";
+        $user = "polariss2";
+        $password = "tjdqls123!@#";
+        $db = "polariss2";
+        $conn = mysqli_connect($host,$user,$password,$db);
+
         $sql = "select 
         no, 
         title, 
         id, 
         date,
-        text
+        text,
+        count
         from board
         ";
 
@@ -120,9 +117,10 @@ th,td{
             <thead>
                 <tr>
                     <th id="first">구분</th>
-                    <th>제목</th>
+                    <th id="second">제목</th>
                     <th>작성자</th>
                     <th>시간</th>
+                    <th>조회수</th>
                 </tr>
             </thead>
 
@@ -137,6 +135,7 @@ th,td{
                     </td>
                     <td><?php  echo $row['id']?></td>
                     <td><?php  echo $row['date']?></td>
+                    <td><?php echo $row['count'];?></td>
                 </tr>
                 <?php }?>
             </tbody>
