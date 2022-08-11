@@ -9,6 +9,7 @@ $title = $_POST['title'];
 $text = $_POST['text'];
 $date = date('Y-m-d H:i:s');
 $image = $_POST['image'];
+$writer = $_SESSION['id'];
 $URL = './board.php';
 $dir = "_image/";
 
@@ -24,8 +25,14 @@ if($_FILES['image']['name']) {
 	$newImage = chr(rand(97,122)).chr(rand(97,122)).$dates.rand(1,9).".".$imageType;
 	move_uploaded_file($_FILES['image']['tmp_name'],$dir.$newImage);
 
-	$sql = "INSERT INTO board (no,id, pw, text, date,title,name,image) 
-	values(null,'$id', '$pw', '$text','$date', '$title','$name','".$dir.$newImage."')";
+	$sql = "INSERT INTO board set
+	 no = 'null',
+	 text = '$text',
+	 date = '$date',
+	 title = '$title',
+	 image = '".$dir.$newImage."',
+	 writer = '$writer'
+	 ";
 
 	//die($sql);
 	

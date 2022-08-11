@@ -21,7 +21,7 @@
     }
     #btn_1, #btn_2, #btn_3{
         height: 40px;
-        width: 80px;
+        width: 100px;
         font-size: 20px;
         text-align: center;
         background-color: white;
@@ -94,10 +94,10 @@
         $db = "polariss2";
         $conn = mysqli_connect($host,$user,$password,$db);
 
-        $sql = "select 
-        no, 
-        title, 
-        id, 
+        $sql = "select
+        no,
+        writer,
+        title,        
         date,
         text,
         count
@@ -133,7 +133,7 @@
                         <a href="content.php?no=<?php echo $row['no']?>"><?php  echo $row['title']?> </a>
 
                     </td>
-                    <td><?php  echo $row['id']?></td>
+                    <td><?php  echo $row['writer']?></td>
                     <td><?php  echo $row['date']?></td>
                     <td><?php echo $row['count'];?></td>
                 </tr>
@@ -143,6 +143,7 @@
         <div id="btn">
         <button id="btn_1" onclick="location.href='./board.php'">목록</button>&nbsp;&nbsp;
         <button id="btn_2"  onclick="location.href='./review.php'">글쓰기</button>&nbsp;&nbsp;
+        <button id="btn_3" onclick="location.href='./index.php'">메인으로</button>
         
     </div>
     </div>

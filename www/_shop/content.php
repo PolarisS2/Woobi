@@ -1,8 +1,13 @@
 <?php 
 
 include('common.php');
-
 $no = $_GET['no'];
+
+$sql_c = "
+SELECT id,word
+FROM chat";
+$result_c = $conn ->query($sql_c);
+// $data_c = mysqli_fetch_assoc($result_c);
 
 $sql_u = "update board
         set count = count + 1
@@ -13,7 +18,6 @@ $result = $conn -> query($sql_u);
 $sql = "select 
             title,
             text,
-            id,
             date,
             image,
             goodcount,
@@ -81,7 +85,45 @@ tr,th,td{
     margin-top: 10px;
     font-size: x-large;
 }
-
+hr{
+    margin-top: 20px;
+    width: 55%;
+}
+#re_text{
+    margin-top: 20px;
+}
+#re_text_input{
+    width: 45%;
+    height: 100px;
+}
+#re_text_ouput{
+    width: 5%;
+    height: 100px;
+}
+#result {
+          border: 1px solid black;
+          padding: 15px;
+          height: 100px;
+          width: 55%;
+          overflow-x: hidden;
+          overflow-y: auto;
+        }
+        textarea {
+          width: 40%;
+        }
+        iframe {
+          width: 0;
+          height: 0;
+          opacity: 0;
+        }
+#re_id{
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+li{
+    list-style: none;
+}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
 
@@ -139,12 +181,27 @@ tr,th,td{
         <button id="btn_3"  onclick="location.href='./delete.php?number=<?= $no ?>&id=<?= $_SESSION['id'] ?>'">삭제</button>
     </div>
 
-
+    <hr>
+    <div id="result">
+        <div style="float: left;">
+            <?php while($row = mysqli_fetch_assoc($result_c)){ ?>
+                <p>
+                    <?php
+                        echo $row['id'] . " : " . $row['word'];}?>
+                </p>
+                
+        
+        </div>
+    </div>
+      <form action="review_text_ok.php" method="post" target="ifram">
+        <textarea id="textarea" name="word"></textarea>
+        <input type="submit" value="전송" onclick="refresh()">
+      </form>
+      <iframe name="ifram"></iframe>
 
     
-    <script src="https://kit.fontawesome.com/8d9741eb42.js" crossorigin="anonymous"></script>
-
-    <script>
+<script src="https://kit.fontawesome.com/8d9741eb42.js" crossorigin="anonymous"></script>
+<script>
     var contentNo = <?php echo $no; ?>;
     function updateContent() {
         location.href='update_content.php?no=' + <?php echo $no ?>;
@@ -199,7 +256,7 @@ tr,th,td{
         
     }
 
-
-
-
+function refresh(){
+    location.reload();
+}
 </script>
