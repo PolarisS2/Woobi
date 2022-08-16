@@ -9,7 +9,6 @@ where id = '$id'
 ";
 
 $result = $conn ->query($sql);
-$row = mysqli_fetch_assoc($result);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -18,6 +17,11 @@ $row = mysqli_fetch_assoc($result);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>장바구니</title>
 </head>
+<style>
+    li{
+        list-style: none;
+    }
+</style>
 <body>
     <div id="container">
         <div id="header">
@@ -27,11 +31,33 @@ $row = mysqli_fetch_assoc($result);
         <ul>
             <li>
                 <?php
-                $row['product'];
-                $row['color'];
-                $row['size'];
-                $row['price'];
-                ?>
+                while($row = mysqli_fetch_assoc($result)){
+                echo $row['product'];
+                echo"
+                <script>
+                <br>
+                </script>
+                ";
+                echo $row['color'];
+                echo"
+                <script>
+                <br>
+                </script>
+                ";
+                echo $row['size'];
+                echo"
+                <script>
+                <br>
+                </script>
+                ";
+                echo $row['price'];
+                echo"
+                <script>
+                <br>
+                </script>
+                ";
+                
+                }?>
             </li>
         </ul>
 
