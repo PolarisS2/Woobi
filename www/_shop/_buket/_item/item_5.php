@@ -37,9 +37,9 @@
             <form action="../buket.php" method="post">
                 <div id="item_img_text">
                     <p><strong>페라 남녀 공용 여름 만능 데님셔츠</strong></p>
-                    <input name="product" type="hidden" readonly value="아론스판 데일리 셋업">
+                    <input name="product" type="hidden" readonly value="페라 남녀 공용 여름 만능 데님셔츠">
                     <p>가격 : 23,700원</p>
-                    <input name="price" type="hidden" readonly value="29,900원">
+                    <input name="price" type="hidden" readonly value="23,700원">
                     <ul id="option">
                         <li>
                             <select name="color">

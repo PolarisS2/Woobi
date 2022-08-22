@@ -37,9 +37,9 @@
             <form action="../buket.php" method="post">
                 <div id="item_img_text">
                     <p><strong>브레이브 썸머 원턱 밴딩 슬랙스</strong></p>
-                    <input name="product" type="hidden" readonly value="아론스판 데일리 셋업">
+                    <input name="product" type="hidden" readonly value="브레이브 썸머 원턱 밴딩 슬랙스">
                     <p>가격 : 16,900원</p>
-                    <input name="price" type="hidden" readonly value="29,900원">
+                    <input name="price" type="hidden" readonly value="16,900원">
                     <ul id="option">
                         <li>
                             <select name="color">

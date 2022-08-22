@@ -37,9 +37,9 @@
             <form action="../buket.php" method="post">
                 <div id="item_img_text">
                     <p><strong>[1+1+1+1+1] ÇÇ³Ó ¸µÅ¬ÇÁ¸® ¹ÝÆÈ Æ¼¼ÅÃ÷</strong></p>
-                    <input name="product" type="hidden" readonly value="¾Æ·Ð½ºÆÇ µ¥ÀÏ¸® ¼Â¾÷">
+                    <input name="product" type="hidden" readonly value="[1+1+1+1+1] ÇÇ³Ó ¸µÅ¬ÇÁ¸® ¹ÝÆÈ Æ¼¼ÅÃ÷">
                     <p>°¡°Ý : 16,900¿ø</p>
-                    <input name="price" type="hidden" readonly value="29,900¿ø">
+                    <input name="price" type="hidden" readonly value="16,900¿ø">
                     <ul id="option">
                         <li>
                             <select name="color">

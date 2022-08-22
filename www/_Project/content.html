@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="euc-kr">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    header {
+        background-color: #ebfcff;
+    }
+
+    #logo {
+        margin: 1rem;
+        height: 5rem;
+    }
+
+    #container {
+        margin: auto;
+        width: 80%;
+    }
+
+    #header {
+        padding: 40px;
+        text-align: center;
+    }
+
+    ul {
+        padding: 0;
+        list-style: none;
+    }
+
+    a {
+        text-decoration: none;
+        color: blue;
+    }
+
+    a:hover {
+        color: red;
+    }
+
+    table {
+        width: 60%;
+        margin: auto;
+        text-align: center;
+        border-collapse: collapse;
+    }
+
+    td {
+        border: 1px solid black;
+    }
+
+    .title {
+        width: 20%;
+    }
+
+    .content {
+        width: 80%;
+    }
+
+    #comment-input {
+        width: 60%;
+    }
+
+    textarea {
+        width: 100%;
+        height: 100px;
+    }
+
+    #comment-input>h2 {
+        margin-top: 80px;
+        text-align: left;
+    }
+
+    #comment-input>button {
+        float: right;
+    }
+
+    #comment-output {
+        margin: auto;
+        width: 60%;
+    }
+
+    @media (max-width : 480px) {
+
+        #comment-input,
+        #comment-output,
+        table {
+            width: 100%;
+        }
+    }
+
+    @media (max-width : 1000px) {
+
+        #comment-input,
+        #comment-output,
+        table {
+            width: 100%;
+        }
+    }
+</style>
+
+<body>
+    <header>
+        <a href="main.html"><img id="logo" src="./img/logo.png" alt=""></a>
+    </header>
+    <div id="container">
+        <table>
+            <tr>
+                <td class="title">제목</td>
+                <td class="content"></td>
+            </tr>
+            <tr>
+                <td class="title">내용</td>
+                <td class="content"></td>
+            </tr>
+        </table>
+        <center>
+            <form action="board_content.php" method="post">
+                <div id="comment-input">
+                    <h2>댓글</h2>
+                    <textarea name="comment" type="text" autofocus required></textarea>
+                    <button>작성완료</button>
+                </div>
+            </form>
+        </center>
+        <div id="comment-output">
+            <ul>
+                <li>작성자 : </li>
+                <li><br><br></li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

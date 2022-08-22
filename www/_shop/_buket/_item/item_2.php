@@ -37,7 +37,7 @@
             <form action="../buket.php" method="post">
                 <div id="item_img_text">
                     <p><strong>[1+1+1] 신소재 아이스 머슬핏 반팔티</strong></p>
-                    <input name="product" type="hidden" readonly value="아론스판 데일리 셋업">
+                    <input name="product" type="hidden" readonly value="[1+1+1] 신소재 아이스 머슬핏 반팔티">
                     <p>가격 : 29,900원</p>
                     <input name="price" type="hidden" readonly value="29,900원">
                     <ul id="option">

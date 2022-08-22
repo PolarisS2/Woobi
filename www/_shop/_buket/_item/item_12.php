@@ -31,15 +31,15 @@
     <div id="container">
         <div>
             <div id="item_img">
-                <img src="//cheat-key.com/web/product/medium/202207/0770f80e18c226f4bb3fc9432b4fb72e.jpg" class="card-img-top" alt="준비중입니다">
+                <img src="//cheat-key.com/web/product/medium/202203/0fd50c12b396386060d765bc7f9611b7.jpg" class="card-img-top" alt="준비중입니다">
             </div>
             
             <form action="../buket.php" method="post">
                 <div id="item_img_text">
-                    <p><strong>페라 남녀공용 여름만능 데님셔츠</strong></p>
-                    <input name="product" type="hidden" readonly value="페라 남녀공용 여름만능 데님셔츠">
-                    <p>가격 : 23,700원</p>
-                    <input name="price" type="hidden" readonly value="23,700원">
+                    <p><strong>브레이브 썸머 원턱 밴딩 슬랙스</strong></p>
+                    <input name="product" type="hidden" readonly value="브레이브 썸머 원턱 밴딩 슬랙스">
+                    <p>가격 : 16,900원</p>
+                    <input name="price" type="hidden" readonly value="16,900원">
                     <ul id="option">
                         <li>
                             <select name="color">

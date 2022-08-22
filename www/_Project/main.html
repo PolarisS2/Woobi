@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메인화면</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: 'yg-jalnan';
+    }
+/* 
+    html,
+    body {
+        font-family: 'Do Hyeon', sans-serif;
+    } */
+
+    @font-face {
+        font-family: 'yg-jalnan';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    #list-header>ul {
+        display: flex;
+    }
+
+    #list-header>ul>li {
+        text-align: center;
+        width: 100%;
+    }
+
+    #list-header>ul>li>a {
+        line-height: 5rem;
+        display: block;
+        background-color: #EDE9D0;
+        color: #00BAE2;
+        text-decoration: none;
+    }
+
+    #list-header>ul>li>a:hover {
+        background-color: white;
+    }
+
+    #list {
+        background-color: white;
+        margin: auto;
+        width: 60%;
+        height: 100vh;
+    }
+
+    #list-header {
+        width: 100%;
+        height: 5rem;
+        background-color: white;
+    }
+
+    #play-list {
+        margin: auto;
+        display: none;
+    }
+
+    #food-list {
+        margin: auto;
+        display: none;
+    }
+
+    #cafe-list {
+        margin: auto;
+        display: none;
+    }
+
+    #info-list {
+        margin: auto;
+        display: none;
+    }
+
+    #community-list {
+        padding: 5%;
+        margin: auto;
+        display: none;
+    }
+
+    #play-list>ul,
+    #food-list>ul,
+    #cafe-list>ul {
+        padding: 0 0 1rem 0;
+        display: flex;
+        border-bottom: 1px solid #eee;
+    }
+
+    .link-title {
+        line-height: 7rem;
+        color: blue;
+        font-size: 20px;
+    }
+
+    .link-title:hover {
+        color: red;
+    }
+
+    .tag {
+        color: gray;
+        margin: 0 40px 0 0;
+    }
+
+    .title-img {
+        height: 8rem;
+        width: 7rem;
+        float: left;
+        margin: 1rem 1rem 0 0;
+    }
+
+    #view-content {
+        padding: 2rem 0 1rem 0;
+        border-bottom: 1px solid #eee;
+    }
+
+    #good {
+        width: 30%;
+        border: none;
+        background-color: white;
+        font-size: 20px;
+        margin: 1rem 0 5rem 0;
+    }
+
+    #comment {
+        margin: calc(5% - 6px);
+        width: 30%;
+        border: none;
+        background-color: white;
+        font-size: 20px;
+        margin: 1rem 0 5rem 0;
+    }
+
+    #share {
+        width: 30%;
+        border: none;
+        background-color: white;
+        font-size: 20px;
+        margin: 1rem 0 5rem 0;
+    }
+
+    #write-btn {
+        float: right;
+    }
+
+    #community-write {
+        float: right;
+        color: #009ff5;
+    }
+
+    #community-write:hover {
+        color: red;
+    }
+</style>
+
+<body>
+    <div id="list">
+        <div id="list-header">
+            <ul>
+                <li onclick="play()"><a href="#play-list">놀자~</a></li>
+                <li onclick="food()"><a href="#food-list">묵자!</a></li>
+                <li onclick="cafe()"><a href="#cafe-list">커피?</a></li>
+                <li onclick="info()"><a href="#info-list">온나!</a></li>
+                <li onclick="community()"><a href="#community-list">뭐라꼬?</a></li>
+            </ul>
+        </div>
+        <div id="list-body">
+            <div id="play-list">
+                <img class="title-img" src="./img/waterpark.jpg" alt="준비중입니다">
+                <a class="link-title" href="content.html">여름 더위를 시워~언하게 날려버릴 아이스 워터파크!!</a>
+                <ul>
+                    <li><a class="tag" href="">#해운대</a></li>
+                    <li><a class="tag" href="">#여행</a></li>
+                    <li><a class="tag" href="">#놀거리</a></li>
+                    <li><a class="tag" href="">#놀자</a></li>
+                </ul>
+
+                <img class="title-img" src="" alt="">
+                <a class="link-title" href="">올 여름 혼자 어때 둘이 어때 여기 어때?</a>
+                <ul>
+                    <li><a class="tag" href="">#광안리</a></li>
+                    <li><a class="tag" href="">#먹거리</a></li>
+                    <li><a class="tag" href="">#놀거리</a></li>
+                </ul>
+            </div>
+            <div id="food-list">
+                <img class="title-img" src="" alt="">
+                <a class="link-title" href="">시원한 냉면/밀면/고메밀면 전문점</a>
+                <ul>
+                    <li><a class="tag" href="">#해운대</a></li>
+                    <li><a class="tag" href="">#여행</a></li>
+                    <li><a class="tag" href="">#놀거리</a></li>
+                    <li><a class="tag" href="">#묵자</a></li>
+                </ul>
+
+                <img class="title-img" src="" alt="">
+                <a class="link-title" href="">디져트로 팥빙수 어때요?</a>
+                <ul>
+                    <li><a class="tag" href="">#광안리</a></li>
+                    <li><a class="tag" href="">#먹거리</a></li>
+                    <li><a class="tag" href="">#놀거리</a></li>
+                </ul>
+            </div>
+            <div id="cafe-list">
+                <img class="title-img" src="" alt="">
+                <a class="link-title" href="">여름에는 역시 시원한 아이스 아메리카노!</a>
+                <ul>
+                    <li><a class="tag" href="">#해운대</a></li>
+                    <li><a class="tag" href="">#여행</a></li>
+                    <li><a class="tag" href="">#놀거리</a></li>
+                    <li><a class="tag" href="">#커피</a></li>
+                </ul>
+
+                <img class="title-img" src="" alt="">
+                <a class="link-title" href="">분위기 좋은 오션 뷰 카페를 찾으시나요?</a>
+                <ul>
+                    <li><a class="tag" href="">#광안리</a></li>
+                    <li><a class="tag" href="">#먹거리</a></li>
+                    <li><a class="tag" href="">#놀거리</a></li>
+                </ul>
+            </div>
+            <div id="info-list">
+                <input type="text">
+            </div>
+            <div id="community-list">
+                <h3 id="view-id">추천인 : abc123</h3>
+                <h2 id="view-content">해운대 청사포에 있는 노란마후라(조개구이)를 추천합니다!!</h2>
+                <button id="good">좋아요</button>
+                <button id="comment">댓글</button>
+                <button id="share">공유</button>
+
+                <h3 id="view-id">추천인 : sejin1230</h3>
+                <h2 id="view-content">다 썰어 횟집 가을전어 맛집</h2>
+                <button id="good">좋아요</button>
+                <button id="comment">댓글</button>
+                <button id="share">공유</button>
+                <div>
+                    <a id="community-write" href="write.html">말해라!</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+    function play() {
+        document.getElementById('play-list').style.display = 'block';
+        document.getElementById('food-list').style.display = 'none';
+        document.getElementById('cafe-list').style.display = 'none';
+        document.getElementById('info-list').style.display = 'none';
+        document.getElementById('community-list').style.display = 'none';
+    }
+
+    function food() {
+        document.getElementById('food-list').style.display = 'block';
+        document.getElementById('play-list').style.display = 'none';
+        document.getElementById('cafe-list').style.display = 'none';
+        document.getElementById('info-list').style.display = 'none';
+        document.getElementById('community-list').style.display = 'none';
+    }
+
+    function cafe() {
+        document.getElementById('cafe-list').style.display = 'block';
+        document.getElementById('play-list').style.display = 'none';
+        document.getElementById('food-list').style.display = 'none';
+        document.getElementById('info-list').style.display = 'none';
+        document.getElementById('community-list').style.display = 'none';
+    }
+
+    function info() {
+        document.getElementById('info-list').style.display = 'block';
+        document.getElementById('play-list').style.display = 'none';
+        document.getElementById('food-list').style.display = 'none';
+        document.getElementById('cafe-list').style.display = 'none';
+        document.getElementById('community-list').style.display = 'none';
+    }
+
+    function community() {
+        document.getElementById('community-list').style.display = 'block';
+        document.getElementById('play-list').style.display = 'none';
+        document.getElementById('food-list').style.display = 'none';
+        document.getElementById('cafe-list').style.display = 'none';
+        document.getElementById('info-list').style.display = 'none';
+    }
+</script>
