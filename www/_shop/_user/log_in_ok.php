@@ -1,5 +1,5 @@
 <?php
-include("common.php");
+include("../common.php");
 $id = $_POST['id'];
 $pw = $_POST['pw'];
 $no = $_POST['no'];

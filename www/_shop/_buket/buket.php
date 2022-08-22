@@ -1,5 +1,5 @@
 <?php
-include("common.php");
+include("../common.php");
 
 $id = $_SESSION['id'];
 $product = $_POST['product'];
@@ -20,7 +20,7 @@ $result = $conn ->query($sql);
 
 echo "
 <script>
-        location.href='item_one.php';
+        location.href='_item/item_one.php';
 </script>";
 
 ?>

@@ -1,0 +1,9 @@
+li{
+    list-style: none;
+}
+#price{
+    margin-bottom: 10px;
+}
+input{
+    float: right;
+}

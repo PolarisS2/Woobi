@@ -1,5 +1,5 @@
 <?php
-include("common.php");
+include("../common.php");
 
 ?>
 <!DOCTYPE html>
@@ -7,40 +7,16 @@ include("common.php");
 
 <head>
     <meta charset='EUC-KR'>
-    <style>
-        table.table2 {
-            border-collapse: separate;
-            border-spacing: 1px;
-            text-align: left;
-            line-height: 1.5;
-            border-top: 1px solid #ccc;
-            margin: 20px 10px;
-        }
-
-        table.table2 tr {
-            width: 50px;
-            padding: 10px;
-            font-weight: bold;
-            vertical-align: top;
-            border-bottom: 1px solid #ccc;
-        }
-
-        table.table2 td {
-            width: 100px;
-            padding: 10px;
-            vertical-align: top;
-            border-bottom: 1px solid #ccc;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="../asset/css/modify.css">
 </head>
 
 <body>
-    <form method="post" action="review_ok.php" enctype="multipart/form-data">
+    <form method="post" action="modify_ok.php" enctype="multipart/form-data">
         <!-- method : POST!!! (GET X) -->
         <table style="padding-top:50px" align=center width=auto border=0 cellpadding=2>
             <tr>
                 <td style="height:40; float:center; background-color:#3C3C3C">
-                    <p style="font-size:25px; text-align:center; color:white; margin-top:15px; margin-bottom:15px"><b>리뷰 작성하기</b></p>
+                    <p style="font-size:25px; text-align:center; color:white; margin-top:15px; margin-bottom:15px"><b>리뷰 수정하기</b></p>
                 </td>
             </tr>
             <tr>
@@ -73,7 +49,7 @@ include("common.php");
                     </table>
 
                     <center>
-                        <input style="height:26px; width:47px; font-size:16px;" type="submit" value="작성">
+                        <input style="height:26px; width:47px; font-size:16px;" type="submit" value="수정완료">
                     </center>
                 </td>
             </tr>

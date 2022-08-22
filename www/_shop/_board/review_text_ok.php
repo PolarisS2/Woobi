@@ -1,5 +1,5 @@
 <?php
-include_once("common.php");
+include_once("../common.php");
 $word = $_POST["word"];
 $id = $_SESSION['id'];
 

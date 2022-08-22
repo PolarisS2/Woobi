@@ -1,5 +1,5 @@
 <?php
-include("common.php");
+include("../common.php");
 
 $id = $_POST['id'];
 $pw = $_POST['pw'];
@@ -11,7 +11,7 @@ $date = date('Y-m-d H:i:s');
 $image = $_POST['image'];
 $writer = $_SESSION['id'];
 $URL = './board.php';
-$dir = "_image/";
+$dir = "../_image/";
 
 
 //if ($result) {

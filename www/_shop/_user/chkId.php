@@ -1,5 +1,5 @@
 <?php 
-include('common.php');
+include('../common.php');
 $q = $_GET['q'];
 $sql = "SELECT id 
         FROM shop 

@@ -9,6 +9,10 @@ if ($_SESSION) {
     echo 
     "<script>
     alert('`$id` 님 안녕하세요');
+    var log_in = document.querySelector('#log_in');
+    var log_out = document.querySelector('#log_out');
+    log_in.style.display = 'none';
+    log_out.style.display = 'block';
     </script>
     ";
     
@@ -22,8 +26,8 @@ if ($_SESSION) {
 else {
     echo "
     <script>
-        alert('다시 로그인 하세요.');
-        location.href='log_in.php';
+        alert('로그아웃 됐습니다. 다시 로그인 하세요.');
+        location.href='./_user/log_in.php';
     </script>
     ";
     

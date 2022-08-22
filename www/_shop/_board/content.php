@@ -1,6 +1,6 @@
 <?php 
 
-include('common.php');
+include('../common.php');
 $no = $_GET['no'];
 
 $sql_c = "
@@ -43,90 +43,8 @@ if($data) {
 
 
 ?>
-<style> 
-*{
-    margin: 0 auto;
-    text-align: center;
-}
-#con_table{
-    margin-top: 3%;
-    border: solid 1px;
-    width: 1000px;
-}
-tr,th,td{
-    border: solid 1px;
-}
-#text{
-    height: 300px;
-}
-#title{
-    height: 100px;
-}
-#id{
-    height: 50px;
-}
-#date{
-    height: 50px;
-}
-#btn{
-    text-align: center;
-    margin-top: 20px;
-}
-#btn_1, #btn_2, #btn_3{
-    height: 40px;
-    width: 60px;
-    font-size: 20px;
-    text-align: center;
-    background-color: white;
-    border: 2px solid black;
-    border-radius: 10px;
-}
-#like{
-    margin-top: 10px;
-    font-size: x-large;
-}
-hr{
-    margin-top: 20px;
-    width: 55%;
-}
-#re_text{
-    margin-top: 20px;
-}
-#re_text_input{
-    width: 45%;
-    height: 100px;
-}
-#re_text_ouput{
-    width: 5%;
-    height: 100px;
-}
-#result {
-          border: 1px solid black;
-          padding: 15px;
-          height: 100px;
-          width: 55%;
-          overflow-x: hidden;
-          overflow-y: auto;
-        }
-        textarea {
-          width: 40%;
-        }
-        iframe {
-          width: 0;
-          height: 0;
-          opacity: 0;
-        }
-#re_id{
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
-li{
-    list-style: none;
-}
-</style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-
+<link rel="stylesheet" type="text/css" href="../asset/css/content.css">
 <div>
     <table id="con_table">
         <tr>
@@ -177,8 +95,8 @@ li{
     
     <div id="btn">
         <button id="btn_1" onclick="location.href='./board.php'">목록</button>&nbsp;&nbsp;
-        <button id="btn_2"  onclick="location.href='./modify.php?number=<?= $no ?>&id=<?= $_SESSION['id'] ?>'">수정</button>&nbsp;&nbsp;
-        <button id="btn_3"  onclick="location.href='./delete.php?number=<?= $no ?>&id=<?= $_SESSION['id'] ?>'">삭제</button>
+        <button id="btn_2"  onclick="location.href='./modify.php?no=<?= $no ?>&id=<?= $_SESSION['id'] ?>'">수정</button>&nbsp;&nbsp;
+        <button id="btn_3"  onclick="location.href='./delete_content.php?no=<?= $no ?>&id=<?= $_SESSION['id'] ?>'">삭제</button>
     </div>
 
     <hr>

@@ -3,76 +3,10 @@
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../../asset/css/item_one.css">
+    <title>상세페이지</title>
+    
 </head>
-<style>
-    *{
-        margin: 0 auto;
-    }
-    @font-face {
-    font-family: 'RixInooAriDuriR';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2207-01@1.0/RixInooAriDuriR.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-    }
-    #container{
-        margin-top: 5%;
-        /* text-align: center; */
-    }
-    #item_img{
-        float: left;
-        margin-right: 40px;
-    }
-    #item_img::after{
-        clear: both;
-        display: table;
-        content: '';
-    }
-    #item_img_text{
-        font-size: x-large;
-        padding-top: 10%;
-    }
-    #item_img_text > p{
-        padding-top: 30px;
-        margin-bottom: 20px;
-    }
-    #option{
-        float: left;
-    }
-    li{
-        list-style: none;
-    }
-
-    #category{
-        float: left;
-        width: 10%;
-        background-color: lightgray;
-        border-radius: 30px;
-        margin-right: 15%;
-        margin-left: 5%;
-    }
-    #category::after{
-        clear: both;
-        display: table;
-        content: '';
-
-    }
-    
-    #position > ul > li{
-        font-family: 'RixInooAriDuriR';
-        margin-top: 10%;
-        margin-bottom: 10%;
-        font-size: xx-large;
-    }
-    #buy_btn,#btn_1,#btn_buket{
-        margin-top: 40px;
-        height: 40px;
-        background-color: black;
-        color: white;
-        margin-left: 10%;
-    }
-    
-</style>
 <body>
     <div id="category">
         <div id="position">
@@ -97,14 +31,14 @@
     <div id="container">
         <div>
             <div id="item_img">
-                <img src="//cheat-key.com/web/product/medium/202206/1cb8eb00f5cdf2960cba8114a961e50d.jpg" class="card-img-top" alt="준비중입니다">
+                <img src="//cheat-key.com/web/product/medium/202207/baf87af5b49a6d2acb539c6bba485a22.jpg" class="card-img-top" alt="준비중입니다">
             </div>
             
-            <form action="buket.php" method="post">
+            <form action="../buket.php" method="post">
                 <div id="item_img_text">
-                    <p><strong>아론스판 데일리 셋업</strong></p>
+                    <p><strong>브레이브 썸머 원턱 밴딩 슬랙스</strong></p>
                     <input name="product" type="hidden" readonly value="아론스판 데일리 셋업">
-                    <p>가격 : 29,900원</p>
+                    <p>가격 : 16,900원</p>
                     <input name="price" type="hidden" readonly value="29,900원">
                     <ul id="option">
                         <li>
@@ -125,8 +59,8 @@
                             </select>
                         </li>
                         <button id="buy_btn" type="submit">BUY NOW(미구현)</button>
-                        <button id="btn_buket" type="submit" onclick="window.open('buket_ok.php','_blank','width=472,height=573')">Buket</button>
-                        <button id="btn_1" onclick="location.href='./index.php'">메인으로</button>
+                        <button id="btn_buket" type="submit" onclick="window.open('../buket_ok.php','_blank','width=472,height=573')">Buket</button>
+                        <button id="btn_1" onclick="location.href='../../index.php'" type="button">메인으로</button>
                     </ul>
                     
                 </div>

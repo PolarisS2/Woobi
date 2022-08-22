@@ -4,143 +4,12 @@
     <meta charset="EUC-KR">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <!-- <link rel="stylesheet" href="./asset/css/main.css"> -->
     <title>메인화면</title>
-
+    <link rel="stylesheet" type="text/css" href="asset/css/index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
-<style>
-.container{        
-    margin-top: 10px;
-    /* height: 300vh; */
-    width: 100%;
-}
-#navbar{
-    width: 100%;
-}
-#navbar_menu{
-    width: 100%;
-    list-style: none;
-    position: fixed;
-}
-#navbar_menu::after{
-    clear: both;
-    content: '';
-    display: table;
-}
-#navbar_menu > li{
-    text-align: center;
-    font-size: medium;
-    margin-left: 10px;
-    margin-top: 10px;
-    width: 4%;
-    float: left;
-}
-#navbar_menu > li::after{
-    clear: both;
-    display: table;
-    content: '';
-}
-#logo_img{
-    float: left;
-    margin-left: 2%;
-}
-#logo_img::after{
-    clear: both;
-    display: table;
-    content: '';
-}
-
-#navbar_menu > li:nth-child(17){
-    margin-left: 1%;
-}
-#contents_1{
-    width: 100%;
-}
-.carousel-item > img{
-    z-index: unset;
-    opacity: 70%;
-    margin-top: 6%;
-}
-#contents_2{
-    text-align: center;
-    margin-top: 10%;
-    margin-bottom: 10%;
-    text-align: center;
-}
-#contents_3{
-    display: inline-flex;
-    margin-bottom: 100px;
-    text-align: center;
-}
-#contents_4{
-    display: inline-flex;
-    margin-bottom: 100px;
-    text-align: center;
-}
-#contents_5{
-    display: inline-flex;
-    margin-bottom: 100px;
-    text-align: center;
-}
-.card:nth-child(2), .card:nth-child(3), .card:nth-child(4){
-    margin-left: 45px;
-}
-#contents_6{
-    display: inline-flex;
-    margin-bottom: 100px;
-    text-align: center;
-}
-.re_contents{
-    float: left;
-    margin-bottom: 20px;
-}
-.re_contents::after{
-    clear: both;
-    content: '';
-    display: table;
-}
-.re_img{
-    float: left;
-    width: 130px;
-    margin-right: 20px;
-}
-.re_img::after{
-    clear: both;
-    content: '';
-    display: table;
-}
-.re_title{
-    float: left;
-}
-.re_title::after{
-    clear: both;
-    content: '';
-    display: table;
-}
-.re_text{
-    float: left;
-}
-.re_text::after{
-    clear: both;
-    content: '';
-    display: table;
-}
-a{
-    text-decoration: none;
-}
-
-#review_text{
-    /* display: flex; */
-}
-#review_a{
-    font-size: xx-large;
-}
-
-
-</style>
-
 <body>
+    
     <div id="navbar">
         <ul id="navbar_menu">
             <img id="logo_img" src="https://cheatkey.speedgabia.com/logo/logo5.png" alt="준비중입니다">
@@ -155,26 +24,21 @@ a{
             <li>Acc</li>
             <li>Set-up</li>
             <li>Couple</li>
-            <li>#Cody</li>
+            <!-- <li>#Cody</li>
             <li>Big size</li>
             <li>당일발송</li>
-            <li>Sale</li>
-            <li><a href="log_in.php">Log-in</a></li>
+            <li>Sale</li> -->
+            <li><a href="./_user/log_in.php" id="log_in">Log-in</a></li>
+            <li><a href="./_user/log_out.php" id="log_out">로그아웃</a></li>
             <li>Order</li>
             <li>Basket</li>
         </ul>
     </div>
-    
+
     <div class="container">
-        
 
         <div id="contents_1">
             <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                </div>
                 <div class="carousel-inner">
                 <div class="carousel-item active">
                     <img src="https://cheatkey.speedgabia.com/banner1/air_wide001.jpg" class="d-block w-100" alt="준비중입니다">
@@ -186,26 +50,21 @@ a{
                     <img src="https://cheatkey.speedgabia.com/banner1/air_wide001.jpg" class="d-block w-100" alt="준비중입니다">
                 </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-                </button>
             </div>
         </div>
+        
         
         <div id="contents_2">
             <p>TODAY'S PICK</p>
             <p>지금 고객님들이 가장 많이 찾으시는 핫템입니다.</p>
         </div>
 
+        
+
 
         <div id="contents_3">
             <div class="card" style="width: 18rem;">
-                <a href="item_one.php"><img src="//cheat-key.com/web/product/medium/202206/1cb8eb00f5cdf2960cba8114a961e50d.jpg" class="card-img-top" alt="준비중입니다"></a>
+                <a href="./_buket/_item/item_one.php"><img src="//cheat-key.com/web/product/medium/202206/1cb8eb00f5cdf2960cba8114a961e50d.jpg" class="card-img-top" alt="준비중입니다"></a>
                 <div class="card-body">
                 <p class="card-text">아론스판 데일리 셋업</p>
                 <p>29,900원</p>
@@ -214,7 +73,7 @@ a{
             </div>
 
             <div class="card" style="width: 18rem;">
-                <img src="//cheat-key.com/web/product/medium/202207/81aa07869f76246aa393f9929a479248.jpg" class="card-img-top" alt="준비중입니다">
+                <a href="./_buket/_item/item_2.php"><img src="//cheat-key.com/web/product/medium/202207/81aa07869f76246aa393f9929a479248.jpg" class="card-img-top" alt="준비중입니다"></a>
                 <div class="card-body">
                 <p class="card-text">[1+1+1] 신소재 아이스 머슬핏 반팔티</p>
                 <p>29,900원</p>
@@ -223,7 +82,7 @@ a{
             </div>
 
             <div class="card" style="width: 18rem;">
-                <img src="//cheat-key.com/web/product/medium/202207/0770f80e18c226f4bb3fc9432b4fb72e.jpg" class="card-img-top" alt="준비중입니다">
+                <a href="./_buket/_item/item_3.php"><img src="//cheat-key.com/web/product/medium/202207/0770f80e18c226f4bb3fc9432b4fb72e.jpg" class="card-img-top" alt="준비중입니다"></a>
                 <div class="card-body">
                 <p class="card-text">페라 남녀공용 여름만능 데님셔츠</p>
                 <p><s>25,000원</s></p>
@@ -232,7 +91,7 @@ a{
             </div>
 
             <div class="card" style="width: 18rem;">
-                <img src="//cheat-key.com/web/product/medium/202207/baf87af5b49a6d2acb539c6bba485a22.jpg" class="card-img-top" alt="준비중입니다">
+                <a href="./_buket/_item/item_4.php"><img src="//cheat-key.com/web/product/medium/202207/baf87af5b49a6d2acb539c6bba485a22.jpg" class="card-img-top" alt="준비중입니다"></a>
                 <div class="card-body">
                 <p class="card-text">브레이브 썸머 원턱 밴딩 슬랙스</p>
                 <p><s>17,800원</s></p>
@@ -244,7 +103,7 @@ a{
 
         <div id="contents_4">
             <div class="card" style="width: 18rem;">
-                <img src="//cheat-key.com/web/product/medium/202207/0770f80e18c226f4bb3fc9432b4fb72e.jpg" class="card-img-top" alt="준비중입니다">
+                <a href="./_buket/_item/item_5.php"><img src="//cheat-key.com/web/product/medium/202207/0770f80e18c226f4bb3fc9432b4fb72e.jpg" class="card-img-top" alt="준비중입니다"></a>
                 <div class="card-body">
                 <p class="card-text">페라 남녀공용 여름만능 데님셔츠</p>
                 <p><s>25,000원</s></p>
@@ -252,7 +111,7 @@ a{
                 </div>
             </div>
             <div class="card" style="width: 18rem;">
-                <img src="//cheat-key.com/web/product/medium/202207/baf87af5b49a6d2acb539c6bba485a22.jpg" class="card-img-top" alt="준비중입니다">
+                <a href="./_buket/_item/item_6.php"><img src="//cheat-key.com/web/product/medium/202207/baf87af5b49a6d2acb539c6bba485a22.jpg" class="card-img-top" alt="준비중입니다"></a>
                 <div class="card-body">
                 <p class="card-text">브레이브 썸머 원턱 밴딩 슬랙스</p>
                 <p><s>17,800원</s></p>
@@ -261,7 +120,7 @@ a{
                 </div>
             </div>
             <div class="card" style="width: 18rem;">
-                <img src="//cheat-key.com/web/product/medium/202206/1cb8eb00f5cdf2960cba8114a961e50d.jpg" class="card-img-top" alt="준비중입니다">
+                <a href="./_buket/_item/item_7.php"><img src="//cheat-key.com/web/product/medium/202206/1cb8eb00f5cdf2960cba8114a961e50d.jpg" class="card-img-top" alt="준비중입니다"></a>
                 <div class="card-body">
                 <p class="card-text">아론스판 데일리 셋업</p>
                 <p>29,900원</p>
@@ -269,7 +128,7 @@ a{
                 </div>
             </div>
             <div class="card" style="width: 18rem;">
-                <img src="//cheat-key.com/web/product/medium/202205/3450f2898870322b00c8534b96170aef.jpg" class="card-img-top" alt="준비중입니다">
+                <a href="./_buket/_item/item_8.php"><img src="//cheat-key.com/web/product/medium/202205/3450f2898870322b00c8534b96170aef.jpg" class="card-img-top" alt="준비중입니다"></a>
                 <div class="card-body">
                 <p class="card-text">[1+1+1+1+1] 피넛 링클프리 반팔 티셔츠</p>
                 <p>1번째 자체제작♥ 어디에도없는♥ 치트키만의 색상♥ 치트키 만의 핏♥ 이게바로 갓.성.비♥</p>
@@ -370,8 +229,8 @@ a{
 
         <div id="review">
             <div id="review_text">
-                <a href="board.php" id="review_a">리뷰</a>
-                <a href="review.php"><input type="button" value="작성하기"></a>
+                <a href="./_board/board.php" id="review_a">리뷰</a>
+                <a href="./_board/review.php"><input type="button" value="작성하기"></a>
             </div>
             <hr>
             <div class="re_contents">
