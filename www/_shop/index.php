@@ -2,7 +2,6 @@
 include_once("common.php");
 include("view/index.html");
 
-// include("common.php");
 
 if ($_SESSION) {
     $id = $_SESSION['id'];
@@ -34,3 +33,4 @@ else {
 }
 
 ?>
+
