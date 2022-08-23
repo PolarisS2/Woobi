@@ -24,9 +24,9 @@ a{
 #navbar_menu > li{
     text-align: center;
     font-size: medium;
-    margin-left: 10px;
+    margin-left: 2%;
     margin-top: 10px;
-    width: 30px;
+    width: 10%px;
     float: left;
 }
 #navbar_menu > li::after{
@@ -48,18 +48,23 @@ a{
     margin-left: 1%;
 }
 #carouselExampleIndicators{
-    width: 100px;
+    width: 100%;
 }
 #contents_1{
     width: 100%;
     float: left;
 }
+#contnets_1::after{
+    clear: both;
+    display: table;
+    content: '';
+}
 
-/* .carousel-item > img{
+.carousel-item > img{
     z-index: -1;
     opacity: 70%;
-    width: 100%;
-} */
+    width: 50%;
+}
 
 #contents_2{
     text-align: center;
@@ -132,6 +137,9 @@ a{
 
 #review_a{
     font-size: xx-large;
+}
+#review_a > input{
+    font-size: smaller;
 }
 #log_out{
     display: none;
