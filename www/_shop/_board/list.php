@@ -58,29 +58,29 @@ A:hover  {color:gray;text-decoration:none;}
 <?
 while ($array=mysqli_fetch_array($result)) {
  
-        $date=date("Y/m/d", $array['date']); //글쓴시각을 Y/m/d 형식에 맞게 문자열로 바꿉니다 .
- 
-        echo "
-    <tr>
-        <td width=30>
-            <p align=center>$cur_num</p>
-        </td>
-        <td width=490>
-            <p>$array[text]< /p>
-        </td>
-        <td width=60>
-            <p align=center>$array[id]</p>
-        </td>
-        <td width=70>
-            <p align=center>$array[date]</p>
-        </td>
-        <td width=30>
-            <p align=center>$array[count]</p>
-        </td>
-    </tr> ";
- 
-        $cur_num --;
- 
+    $date=date("Y/m/d", $array['date']); //글쓴시각을 Y/m/d 형식에 맞게 문자열로 바꿉니다 .
+
+    echo "
+<tr>
+    <td width=30>
+        <p align=center>$cur_num</p>
+    </td>
+    <td width=490>
+        <p>$array[text]< /p>
+    </td>
+    <td width=60>
+        <p align=center>$array[id]</p>
+    </td>
+    <td width=70>
+        <p align=center>$array[date]</p>
+    </td>
+    <td width=30>
+        <p align=center>$array[count]</p>
+    </td>
+</tr> ";
+
+    $cur_num --;
+
 }
 ?>
     <tr>

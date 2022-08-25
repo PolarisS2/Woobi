@@ -4,6 +4,13 @@
 a{
     text-decoration: none;
 }
+li > a{
+    text-decoration: none;
+}
+#navbar_menu > ul > li > a{
+    text-decoration: none;
+
+}
 .container{
     margin-top: 10px;
 }

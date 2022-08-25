@@ -1,4 +1,4 @@
-<?
+<!-- <?
 // 전페 페이지 구함. ceil() 올림함수  
 $total_page = ceil($total_article / $view_article);  
 
@@ -55,4 +55,4 @@ else                      echo "  [Last]   ";
 */ 
 ?>  
 
-</td></tr></table>
+</td></tr></table> -->

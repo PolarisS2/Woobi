@@ -49,3 +49,36 @@ function fn_submit() {
         phone.value = "";
     }
 }
+
+var pw = document.querySelector("#pw");
+var cpw = document.querySelector("#cpw");
+function chk_info(asValue){
+var check_id = /^[a-z]+[a-z0-9]{5,19}$/; //아이디 양식
+var check_pw = /^(?=.*[a-zA-Z])(?=.*[!@#$%^*+=-])(?=.*[0-9]).{8,25}$/; //비밀번호양식
+
+if(check_id.test(id.value)){
+    document.querySelector("#uidg").style.display = "none"; //달라요
+    document.querySelector("#uids").style.display = "block";
+    
+}else{
+    document.querySelector("#uidg").style.display = "block"; //달라요
+    document.querySelector("#uids").style.display = "none";
+}
+
+// ==================비밀번호======================
+if(check_pw.test(pw.value)){
+    document.querySelector("#pwg").style.display = "none"; //달라요
+    document.querySelector("#pws").style.display = "block";
+}else{
+    document.querySelector("#pwg").style.display = "block"; //달라요
+    document.querySelector("#pws").style.display = "none";
+}
+
+if(pw.value == cpw.value){
+    document.querySelector("#cpwg").style.display = "none"; //달라요
+    document.querySelector("#cpws").style.display = "block";
+}else{
+    document.querySelector("#cpwg").style.display = "block"; //달라요
+    document.querySelector("#cpws").style.display = "none";
+}
+}

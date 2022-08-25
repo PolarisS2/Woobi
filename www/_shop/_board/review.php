@@ -44,7 +44,12 @@ include("../common.php");
 
                         <tr>
                             <td>비밀번호</td>
-                            <td><input type="password" name="pw" size=15 maxlength=15></td>
+                            <td>
+                                <input type="password" name="pw" size=15 maxlength=15>
+                                <br>
+                                비밀글<input type="checkbox" value="1" name="lockpost">
+                            </td>
+                            
                         </tr>
                     </table>
 

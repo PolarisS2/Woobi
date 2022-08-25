@@ -13,7 +13,11 @@ $writer = $_SESSION['id'];
 $URL = './board.php';
 $dir = "../_image/";
 
-
+if(isset($_POST['lockpost'])){
+	$lo_post = '1';
+}else{
+	$lo_post = '0';
+}
 //if ($result) {
 if($_FILES['image']['name']) {
 	$imageFullName = strtolower($_FILES['image']['name']);
@@ -31,14 +35,12 @@ if($_FILES['image']['name']) {
 	 date = '$date',
 	 title = '$title',
 	 image = '".$dir.$newImage."',
-	 writer = '$writer'
+	 writer = '$writer',
+	 lock_post = '$lo_post'
 	 ";
-
-	//die($sql);
-	
 	$result = $conn->query($sql);
 
-	//chmod($dir.$newImage,0777);
+
 ?>
 	<script>
 		alert("<?php echo "게시글이 등록되었습니다." ?>");

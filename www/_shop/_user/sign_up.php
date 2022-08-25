@@ -20,12 +20,12 @@
             
                 <div>
                     <label>비밀번호</label>
-                    <input name="pw" type="text" placeholder="비밀번호" required>
+                    <input id="pw" name="pw" type="text" placeholder="비밀번호" required onkeyup="chk_info()">
                 </div>
             
                 <div>
                     <label>비밀번호 확인</label>
-                    <input name="cpw" type="text" placeholder="비밀번호확인" required>
+                    <input id="cpw" name="cpw" type="text" placeholder="비밀번호확인" required onkeyup="chk_info()">
                 </div>
             
                 <div>
